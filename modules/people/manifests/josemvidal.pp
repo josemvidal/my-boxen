@@ -11,6 +11,12 @@ class people::josemvidal {
   include android::sdk
   include android::ndk
   include android::tools
+  include android::platform_tools
+  android::extra { 'extra-google-google_play_services': }
+  include android::doc
+  include android::studio
+  include android::19
+  include android::21
   include virtualbox
   include java
   include googledrive
