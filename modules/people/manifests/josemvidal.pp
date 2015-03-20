@@ -22,6 +22,23 @@ class people::josemvidal {
   include osx::global::tap_to_click
 
 
+  $homebrew_packages = [
+                        'tree',
+                        'curl',
+                        'gawk',
+                        'wget',
+                        'nmap',
+                        'tmux',
+                        'rust',
+                        'libxml2',
+                        'imagemagick'
+                        ]
+
+  ## Declare all Homebrew packages at once
+  package { $homebrew_packages: }
+
+
+
   # include virtualbox
   # include java
   # include intellij
