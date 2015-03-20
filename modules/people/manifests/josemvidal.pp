@@ -1,7 +1,7 @@
 class people::josemvidal {
 
   include gitx
-  include iterm2
+  include iterm2::stable
   include osx
   include dropbox
   include chrome
