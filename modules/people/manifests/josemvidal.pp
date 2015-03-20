@@ -2,11 +2,15 @@ class people::josemvidal {
 
   include gitx
   include iterm2::stable
-  include osx
   include dropbox
   include chrome
   include vagrant
   include github_for_mac
+
+
+
+  include osx::recovery_message { 'If this Mac is found, please email jmvidal@gmail.com': }
+  include osx::global::tap_to_click
 
   # include android::sdk
   # include android::ndk
