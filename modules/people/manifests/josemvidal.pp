@@ -15,6 +15,10 @@ class people::josemvidal {
   include java
   include googledrive
   include calibre
+  include dash
+  include fantastical
+  include skitch
+  include flux
 
   $recovery_message = "If found, please email jmvidal@gmail.com"
   osx::recovery_message { $recovery_message: }
