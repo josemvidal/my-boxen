@@ -20,6 +20,7 @@ class people::josemvidal {
   include skitch
   include flux
 
+#
   $recovery_message = "If found, please email jmvidal@gmail.com"
   osx::recovery_message { $recovery_message: }
 
