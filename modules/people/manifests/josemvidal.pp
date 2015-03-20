@@ -6,13 +6,15 @@ class people::josemvidal {
   include chrome
   include vagrant
   include github_for_mac
+  include evernote
   include emacs
   include android::sdk
   include android::ndk
   include android::tools
   include virtualbox
   include java
-  include eclipse::java
+  include googledrive
+  include calibre
 
   $recovery_message = "If found, please email jmvidal@gmail.com"
   osx::recovery_message { $recovery_message: }
