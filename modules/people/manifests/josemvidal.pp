@@ -8,8 +8,9 @@ class people::josemvidal {
   include github_for_mac
 
 
+  $recovery_message = "If found, please email jmvidal@gmail.com"
+  osx::recovery_message { $recovery_message: }
 
-  include osx::recovery_message { 'If this Mac is found, please email jmvidal@gmail.com': }
   include osx::global::tap_to_click
 
   # include android::sdk
