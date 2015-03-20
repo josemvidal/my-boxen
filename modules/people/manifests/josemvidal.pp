@@ -20,7 +20,11 @@ class people::josemvidal {
   include skitch
   include flux
 
-#
+  package { 'hyperswitch':
+    provider => 'compressed_app',
+    source   => 'http://bahoom.com/hyperswitch/HyperSwitch.zip'
+  }
+
   $recovery_message = "If found, please email jmvidal@gmail.com"
   osx::recovery_message { $recovery_message: }
 
