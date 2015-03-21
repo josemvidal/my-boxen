@@ -14,6 +14,8 @@ class people::josemvidal {
   include android::platform_tools
   android::extra { 'extra-google-google_play_services': }
   include android::doc
+  #Had to install Java 1.6 from https://support.apple.com/kb/DL1572?viewlocale=en_US&locale=en_US
+  # to get android studio to run
   include android::studio
   include android::19
   include android::21
@@ -25,6 +27,7 @@ class people::josemvidal {
   include fantastical
   include skitch
   include flux
+  include fonts
 
   package { 'hyperswitch':
     provider => 'compressed_app',
@@ -52,19 +55,52 @@ class people::josemvidal {
   ## Declare all Homebrew packages at once
   package { $homebrew_packages: }
 
+  # setup my symlinks.
 
+  # $::luser and $::boxen_srcdir come from Boxen's custom facts
+  $my_username  = $::luser
+  $homedir   = "/Users/${my_username}"
 
-  # include virtualbox
-  # include java
-  # include intellij
-  # include eclipse
-  # include android
-  # include calibre
-  # include evernote
-  # include python
-  # include googledrive
+  file { "${homedir}/.emacs.bmk":
+    ensure => 'link',
+    target => "${homedir}/Dropbox/dotfiles/.emacs.bmk"
+  }
 
-  # $Home     = "/Users/${::boxen_user}"
+  file { "${homedir}/.emacs.d":
+    ensure => 'link',
+    target => "${homedir}/Dropbox/prelude"
+  }
+
+  file { "${homedir}/.gitconfig":
+    ensure => 'link',
+    target => "${homedir}/Dropbox/dotfiles/.gitconfig"
+  }
+
+  file { "${homedir}/.profile":
+    ensure => 'link',
+    target => "${homedir}/Dropbox/dotfiles/.profile"
+  }
+
+  file { "${homedir}/bin":
+    ensure => 'link',
+    target => "${homedir}/Dropbox/bin"
+  }
+
+  file { "${homedir}/prelude":
+    ensure => 'link',
+    target => "${homedir}/Dropbox/prelude"
+  }
+
+  file { "${homedir}/progs":
+    ensure => 'link',
+    target => "${homedir}/Dropbox/progs"
+  }
+
+  file { "${homedir}/wp":
+    ensure => 'link',
+    target => "${homedir}/Dropbox/wp"
+  }
+
   # $my       = "${home}/my"
   # $dotfiles = "${my}/dotfiles"
 
