@@ -28,7 +28,7 @@ class people::josemvidal {
   include skitch
   include flux
   include fonts
-  #include utorrent
+  include utorrent
 
   package { 'hyperswitch':
     provider => 'compressed_app',
