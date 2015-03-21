@@ -56,7 +56,8 @@ class people::josemvidal {
                         'rust',
                         'libxml2',
                         'imagemagick',
-                        'mosh'
+                        'mosh',
+                        'lastpass-cli'
                         ]
 
   ## Declare all Homebrew packages at once
