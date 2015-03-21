@@ -30,6 +30,16 @@ class people::josemvidal {
   include fonts
 #  include utorrent
 
+  # Mysql important info
+  # ATTENTION Boxen uses a non standard 13306 port to avoid collisions.
+  # Once installed, you can access the following variables in your environment, projects, etc:
+
+  #   BOXEN_MYSQL_PORT: the configured MySQL port
+  #   BOXEN_MYSQL_URL: the URL for MySQL, including localhost & port
+  #   BOXEN_MYSQL_SOCKET: the path to the MySQL socket
+  include mysql
+  mysql::db { 'mydb': }
+
   package { 'hyperswitch':
     provider => 'compressed_app',
     source   => 'http://bahoom.com/hyperswitch/HyperSwitch.zip'
