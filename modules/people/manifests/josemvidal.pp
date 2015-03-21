@@ -55,7 +55,8 @@ class people::josemvidal {
                         'tmux',
                         'rust',
                         'libxml2',
-                        'imagemagick'
+                        'imagemagick',
+                        'mosh'
                         ]
 
   ## Declare all Homebrew packages at once
