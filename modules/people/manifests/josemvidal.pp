@@ -35,6 +35,11 @@ class people::josemvidal {
     source   => 'http://bahoom.com/hyperswitch/HyperSwitch.zip'
   }
 
+  package { 'RubyMine':
+    provider => 'appdmg',
+    source   => "http://download.jetbrains.com/ruby/RubyMine-7.0.4.dmg",
+  }
+
   $recovery_message = "If found, please email jmvidal@gmail.com"
   osx::recovery_message { $recovery_message: }
 

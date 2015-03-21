@@ -189,11 +189,6 @@ GITHUBTARBALL
     fonts (0.0.5)
 
 GITHUBTARBALL
-  remote: nickpellant/puppet-utorrent
-  specs:
-    utorrent (1.2.1)
-
-GITHUBTARBALL
   remote: puppetlabs/puppetlabs-inifile
   specs:
     inifile (1.1.1)
@@ -247,7 +242,6 @@ DEPENDENCIES
   skitch (= 1.0.3)
   stdlib (= 4.2.1)
   sudo (= 1.0.0)
-  utorrent (= 1.2.1)
   vagrant (= 3.2.0)
   virtualbox (= 1.0.13)
   xquartz (= 1.2.1)
