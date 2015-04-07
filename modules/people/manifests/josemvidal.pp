@@ -30,6 +30,9 @@ class people::josemvidal {
   include fonts
 #  include utorrent
 
+  #setup my node version
+  class { 'nodejs::global': version => 'v0.10.31' }
+
   # Mysql important info
   # ATTENTION Boxen uses a non standard 13306 port to avoid collisions.
   # Once installed, you can access the following variables in your environment, projects, etc:
