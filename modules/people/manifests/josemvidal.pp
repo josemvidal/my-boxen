@@ -84,42 +84,42 @@ class people::josemvidal {
 
   file { "${homedir}/.emacs.bmk":
     ensure => 'link',
-    target => "${homedir}/Dropbox/dotfiles/.emacs.bmk"
+    target => "${homedir}/Google\ Drive/share/dotfiles/.emacs.bmk"
   }
 
   file { "${homedir}/.emacs.d":
     ensure => 'link',
-    target => "${homedir}/Dropbox/prelude"
+    target => "${homedir}/Google\ Drive/share/prelude"
   }
 
   file { "${homedir}/.gitconfig":
     ensure => 'link',
-    target => "${homedir}/Dropbox/dotfiles/.gitconfig"
+    target => "${homedir}/Google\ Drive/share/dotfiles/.gitconfig"
   }
 
   file { "${homedir}/.profile":
     ensure => 'link',
-    target => "${homedir}/Dropbox/dotfiles/.profile"
+    target => "${homedir}/Google\ Drive/share/dotfiles/.profile"
   }
 
   file { "${homedir}/bin":
     ensure => 'link',
-    target => "${homedir}/Dropbox/bin"
+    target => "${homedir}/Google\ Drive/share/bin"
   }
 
   file { "${homedir}/prelude":
     ensure => 'link',
-    target => "${homedir}/Dropbox/prelude"
+    target => "${homedir}/Google\ Drive/share/prelude"
   }
 
   file { "${homedir}/progs":
     ensure => 'link',
-    target => "${homedir}/Dropbox/progs"
+    target => "${homedir}/Google\ Drive/share/progs"
   }
 
   file { "${homedir}/wp":
     ensure => 'link',
-    target => "${homedir}/Dropbox/wp"
+    target => "${homedir}/Google\ Drive/share/wp"
   }
 
   # $my       = "${home}/my"
